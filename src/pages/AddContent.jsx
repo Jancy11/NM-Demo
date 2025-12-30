@@ -1,14 +1,14 @@
-const ViewContent = () => {
+const AddContent = () => {
   return (
     <div className="card">
-      <h2>View Content</h2>
-      <ul>
-        <li>Post 1</li>
-        <li>Post 2</li>
-        <li>Post 3</li>
-      </ul>
+      <h2>Add Content</h2>
+      <input placeholder="Title" />
+      <br/><br />
+      <textarea placeholder="Description"></textarea>
+      <br /><br />
+      <button>Add</button>
     </div>
   );
 };
 
-export default ViewContent;
+export default AddContent;
