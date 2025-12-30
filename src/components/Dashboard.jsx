@@ -1,10 +1,10 @@
 function Dashboard() {
   return (
     <div className="dashboard">
-      <h2>Welcome to CMS Dashboard</h2>
-      <p>Total Posts: 10</p>
-      <p>Total Users: 5</p>
-      <p>Total Account Created: 1000</p>
+      <h2>Welcome to Simple LMS</h2>
+      <p><strong>Courses:</strong> 3</p>
+      <p><strong>Students:</strong> 5</p>
+      <p>Use the menu to view Courses, Students, or Enroll a student.</p>
     </div>
   );
 }

@@ -28,11 +28,12 @@
 /* Sidebar (left menu) */
 .sidebar {
   width: 220px;
-  background-color: #f1f5f9;
-  padding: 20px;
+  background-color: #ffffff;
+  padding: 12px;
   margin: 20px;
-  border-radius: 6px;
+  border-radius: 8px;
   align-self: flex-start;
+  box-shadow: 0 4px 12px rgba(2,6,23,0.04);
 }
 
 /* Main content area (centered) */
@@ -45,23 +46,107 @@
   background-color: #f8fafc;
 }
 
-.sidebar ul {
+/* Remove default bullets for lists inside app */
+.sidebar ul,
+.dashboard ul,
+ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
+/* Sidebar item */
 .sidebar li {
-  padding: 10px 0;
+  padding: 10px 12px;
+  margin-bottom: 8px;
   cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.sidebar li:hover {
+  background-color: #eef6ff;
+  color: #0b6fb1;
 }
 
 /* Dashboard */
 .dashboard {
   max-width: 900px;
   width: 100%;
-  padding: 40px;
+  padding: 36px;
   background-color: #ffffff;
   box-shadow: 0 6px 18px rgba(2,6,23,0.08);
   border-radius: 8px;
+  text-align: left;
+}
+
+.dashboard h2 {
   text-align: center;
+  margin-bottom: 16px;
+}
+
+.dashboard ul li {
+  padding: 12px;
+  border-bottom: 1px solid #eef2f7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboard ul li:last-child {
+  border-bottom: none;
+}
+
+/* Inputs & buttons */
+input,
+select,
+textarea {
+  padding: 8px 10px;
+  border: 1px solid #e6edf3;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+button {
+  background-color: #0ea5e9;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+button:hover {
+  background-color: #0284c7;
+}
+
+form {
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Small responsive tweak */
+@media (max-width: 700px) {
+  .sidebar {
+    width: 160px;
+    margin: 12px;
+  }
+  .dashboard {
+    padding: 20px;
+  }
+}
+
+/* Validation messages */
+.error-text {
+  color: #ef4444;
+  margin-top: 8px;
+}
+.success-text {
+  color: #16a34a;
+  margin-top: 8px;
 }
 
