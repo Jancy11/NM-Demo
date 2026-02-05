@@ -6,6 +6,7 @@ import Dashboard from "./components/Dashboard";
 import CoursesPage from "./pages/ListPage";
 import StudentsPage from "./pages/AddPage";
 import EnrollPage from "./pages/EditPage";
+import SrcasPage from "./pages/SrcasPage";
 
 function App() {
   const [page, setPage] = useState("dashboard");
@@ -14,6 +15,8 @@ function App() {
     switch (page) {
       case "courses":
         return <CoursesPage />;
+      case "srcas":
+        return <SrcasPage />;
       case "students":
         return <StudentsPage />;
       case "enroll":

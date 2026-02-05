@@ -6,6 +6,7 @@ function Sidebar({ setPage }) {
         <li onClick={() => setPage("courses")}>Courses</li>
         <li onClick={() => setPage("students")}>Students</li>
         <li onClick={() => setPage("enroll")}>Enroll</li>
+        <li onClick={() => setPage("srcas")}>SRCAS</li>
       </ul>
     </div>
   );
